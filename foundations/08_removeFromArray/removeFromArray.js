@@ -1,7 +1,16 @@
-const removeFromArray = function(arr, remove) {
-    arr.splice(arr.indexOf(remove), 1)
+const removeFromArray = function(arr) {
+    for (let i = 1; i < arguments.length; i++){
+        if (arr.indexOf(arguments[i]) < 0) {
+            continue
+        }
+        arr.splice(arr.indexOf(arguments[i]), 1)
+    }
+    
     return arr
+    
 };
 
 // Do not edit below this line
 module.exports = removeFromArray;
+
+
